@@ -9,6 +9,10 @@
     background: none;
     cursor: pointer;
 
+    svg path {
+        fill: #354052;
+    }
+
     &--settings {
         width: 40px;
         height: 40px;
@@ -105,5 +109,34 @@
 
         background-color: #1f8efa;
         border-radius: 50%;
+    }
+
+    &--filter {
+        font-size: 14px;
+        line-height: 1.1;
+        font-weight: 500;
+        color: #354052;
+
+        text-decoration: underline;
+        text-decoration-color: #3a9eff;
+    }
+
+    &--widget-settings {
+        width: 20px;
+        height: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg path {
+            fill: #516173;
+        }
+
+        &:hover {
+            svg path {
+                fill: #1f8efa;
+            }
+        }
     }
 }

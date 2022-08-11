@@ -1,0 +1,25 @@
+.main {
+    grid-area: main;
+
+    background-color: #eff3f6;
+
+    display: grid;
+    padding: 16px;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 520px);
+    gap: 16px;
+
+    overflow: auto;
+
+    // scrollbar
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #1f8efa;
+        border-radius: 20px;
+        border: 3px solid #eff3f6;
+    }
+}
