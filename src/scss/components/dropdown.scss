@@ -3,11 +3,99 @@
     font-size: 1.4rem;
     font-weight: 500;
 
-    &:hover &__list {
+    &--user {
+        .dropdown__content {
+            border-radius: 8px 0 0 8px;
+            padding: 0 0 8px;
+            top: 0;
+            right: 56px;
+
+            margin: 0;
+
+            color: #354052;
+            font-size: 1.4rem;
+        }
+
+        .dropdown__content-header {
+            height: 56px;
+            padding: 0 16px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #dfe3e9;
+        }
+
+        .dropdown__content-header-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dropdown__content-header-name {
+            font-weight: 700;
+        }
+
+        .dropdown__content-header-profession {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #7f8fa4;
+        }
+
+        .dropdown__content-header-status {
+            position: relative;
+            width: 16px;
+            height: 16px;
+
+            background-color: #fff;
+            border-radius: 50%;
+            border: 1px solid #dfe3e9;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                width: 13px;
+                height: 13px;
+
+                background-color: #10ab4f;
+                border-radius: 50%;
+            }
+        }
+
+        .dropdown__content-tracker {
+            display: flex;
+            align-items: center;
+            padding: 10px 16px;
+
+            background-color: #eff3f6;
+        }
+
+        .dropdown__content-tracker-body {
+            display: flex;
+            align-items: center;
+
+            padding-right: 8px;
+
+            border-right: 1px solid #dfe3e9;
+        }
+
+        .dropdown__content-tracker-btn-start {
+            margin-left: 4px;
+        }
+
+        .dropdown__content-tracker-date {
+            margin-left: 8px;
+        }
+    }
+
+    &:hover &__content {
         display: block;
     }
 
-    &__list {
+    &__content {
         position: absolute;
         right: 0;
         z-index: 1;
@@ -23,6 +111,9 @@
 
         box-shadow: $shadow;
         border-radius: $radii;
+    }
+
+    &__list {
     }
 
     &__item {

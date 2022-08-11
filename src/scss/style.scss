@@ -23,6 +23,8 @@ body {
 }
 
 .container {
+    position: relative;
+
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 56px;
@@ -68,3 +70,5 @@ a {
 @import 'components/nav.scss';
 @import 'components/btn.scss';
 @import 'components/footer.scss';
+@import 'components/user-panel.scss';
+@import 'components/date.scss';
