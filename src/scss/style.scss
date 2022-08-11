@@ -13,10 +13,58 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $family;
+    font-size: 1.2rem;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 56px;
+    grid-template-areas:
+        'header sidebar'
+        'main sidebar'
+        'footer sidebar';
+}
+
+.main {
+    grid-area: main;
+
+    background-color: #eff3f6;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 // components
 @import 'components/header.scss';
+@import 'components/sidebar.scss';
+@import 'components/dropdown.scss';
+@import 'components/nav.scss';
+@import 'components/btn.scss';
 @import 'components/footer.scss';

@@ -1,0 +1,70 @@
+.btn {
+    padding: 0;
+
+    font-family: $family;
+    font-weight: 700;
+    font-size: 1.4rem;
+
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+    &--settings {
+        width: 40px;
+        height: 40px;
+
+        border-radius: $radii;
+
+        transition: background-color 0.3s linear;
+
+        svg path {
+            transition: fill 0.3s linear;
+        }
+    }
+
+    &--settings-dark {
+        background-color: #273142;
+
+        svg path {
+            fill: #e9edf1;
+        }
+
+        &:hover {
+            background-color: #354052;
+
+            svg path {
+                fill: #1f8efa;
+            }
+        }
+    }
+    &--settings-light {
+        background-color: #fff;
+
+        svg path {
+            fill: #354052;
+        }
+        &:hover {
+            background-color: #e9edf1;
+
+            svg path {
+                fill: #1f8efa;
+            }
+        }
+    }
+
+    &--fill-blue {
+        padding: 12px;
+
+        text-transform: uppercase;
+        color: #fff;
+
+        background-color: #1f8efa;
+        border-radius: $radii;
+
+        transition: background-color 0.3s linear;
+
+        &:hover {
+            background-color: #0085f0;
+        }
+    }
+}

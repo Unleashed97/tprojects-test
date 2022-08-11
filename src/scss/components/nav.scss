@@ -1,0 +1,42 @@
+.nav {
+    margin-right: 24px;
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 24px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+
+        &:last-child {
+            display: block;
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        position: relative;
+        padding: 11px 4px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            z-index: 3;
+
+            width: 100%;
+            height: 2px;
+
+            background-color: transparent;
+
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        &:hover::after {
+            background-color: #1f8efa;
+        }
+    }
+}

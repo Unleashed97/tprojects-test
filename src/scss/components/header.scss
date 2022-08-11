@@ -1,2 +1,133 @@
 .header {
+    display: flex;
+    flex-direction: column;
+    .header-top {
+        width: 100%;
+        height: 56px;
+        padding: 8px 16px;
+
+        grid-area: header;
+
+        display: flex;
+        align-items: center;
+
+        background-color: #273142;
+        border-bottom: 2px solid #354052;
+
+        &__logo {
+            display: flex;
+            align-items: center;
+            margin-right: 24px;
+
+            font-size: 20px;
+            font-weight: 700;
+
+            color: #fff;
+
+            img {
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+        }
+
+        &__btn-add {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+
+            margin-right: 24px;
+
+            background-color: #1f8efa;
+            border-radius: 50%;
+        }
+
+        &__btn-settings {
+            width: 40px;
+            height: 40px;
+
+            border-radius: $radii;
+
+            transition: background-color 0.3s linear;
+
+            svg path {
+                transition: fill 0.3s linear;
+            }
+
+            &:hover {
+                background-color: #354052;
+                svg path {
+                    fill: #1f8efa;
+                }
+            }
+        }
+    }
+
+    .header-bottom {
+        width: 100%;
+        height: 56px;
+        padding: 8px 16px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: #fff;
+
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #354052;
+
+        border-bottom: 1px solid #dfe3e9;
+
+        &__info {
+            display: flex;
+            align-items: center;
+        }
+
+        &__tab,
+        &__date,
+        &__weather {
+            padding-right: 16px;
+            padding-left: 16px;
+            border-right: 1px solid #dfe3e9;
+        }
+
+        &__tab {
+            text-transform: uppercase;
+
+            padding-left: 0;
+        }
+
+        &__date {
+            &-day-of-week {
+                color: #0085f0;
+            }
+        }
+
+        &__weather {
+            display: flex;
+            align-items: center;
+            padding-right: 0;
+            border-right: 0;
+
+            svg {
+                margin-right: 10px;
+            }
+        }
+
+        &__actions {
+            display: flex;
+            align-items: center;
+        }
+
+        &__btn-settings {
+            margin-right: 9px;
+        }
+
+        &__notification {
+            margin-right: 17px;
+        }
+    }
 }

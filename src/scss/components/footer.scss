@@ -1,2 +1,30 @@
 .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    height: 28px;
+    padding: 6px 16px;
+
+    grid-area: footer;
+
+    display: flex;
+    justify-content: flex-end;
+
+    font-size: 1.3rem;
+    line-height: 1.2;
+    color: #7f8fa4;
+
+    background-color: #e9edf1;
+
+    &__copyright {
+        padding-right: 8px;
+    }
+
+    &__version {
+        padding-left: 8px;
+        border-left: 1px solid #dfe3e9;
+    }
 }

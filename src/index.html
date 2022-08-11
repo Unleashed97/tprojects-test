@@ -7,13 +7,21 @@
 })
 
 <body>
-    <!-- header include -->
-    @@include('html/partials/header.html')
 
-    <!-- main -->
-    <main></main>
-    <!-- footer include -->
-    @@include('html/partials/footer.html')
+    <div class="container">
+        <!-- header include -->
+        @@include('html/partials/header.html')
+
+        <!-- main -->
+        <main class="main"></main>
+
+        <aside class="sidebar">
+
+        </aside>
+
+        <!-- footer include -->
+        @@include('html/partials/footer.html')
+    </div>
 
     <!-- scripts -->
     <script src="js/script.min.js"></script>
