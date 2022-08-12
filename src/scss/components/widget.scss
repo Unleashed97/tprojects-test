@@ -50,11 +50,12 @@
     &__filters {
         display: flex;
         align-items: center;
+
+        font-size: 1.4rem;
+        color: #516173;
     }
 
     &__filters-caption {
-        font-size: 1.4rem;
-        color: #516173;
         margin-right: 8px;
     }
 
@@ -66,10 +67,6 @@
         margin-left: 8px;
     }
 
-    &__content {
-        flex-grow: 1;
-    }
-
     &__header,
     &__footer {
         .widget__container {
@@ -77,6 +74,93 @@
             justify-content: space-between;
             align-items: center;
         }
+    }
+
+    &__content {
+        flex-grow: 1;
+
+        overflow: auto;
+
+        // scrollbar
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #1f8efa;
+            border-radius: 20px;
+            border: 3px solid #fff;
+        }
+    }
+
+    &__contacts {
+    }
+
+    &__contacts-list {
+        padding: 16px;
+    }
+
+    &__contacts-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 16px;
+        margin-bottom: 8px;
+
+        border: 1px solid #dfe3e9;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__contacts-item-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__contacts-item-name {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #354052;
+        line-height: 1.15;
+    }
+
+    &__contacts-item-data {
+        display: flex;
+
+        font-size: 1.3rem;
+        color: #7f8fa4;
+        line-height: 1.2;
+    }
+
+    &__contacts-item-tel,
+    &__contacts-item-email {
+        svg {
+            margin-right: 4px;
+        }
+    }
+
+    &__contacts-item-tel {
+        margin-right: 8px;
+    }
+
+    &__contacts-item-img {
+        width: 32px;
+        height: 32px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #516173;
+
+        background: linear-gradient(0deg, #3a9eff -251.25%, #ecf6ff 50%);
+        border-radius: 50%;
     }
 
     &__footer {
@@ -89,21 +173,16 @@
         border-top: 2px solid #dfe3e9;
     }
 
+    &__number-of-contacts {
+        padding-right: 8px;
+        border-right: 1px solid #dfe3e9;
+
+        & + .widget__last-update {
+            padding-left: 8px;
+        }
+    }
+
     &__controls-update {
         margin-right: 18px;
-    }
-
-    // scrollbar
-    &::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: #1f8efa;
-        border-radius: 20px;
-        border: 3px solid #fff;
     }
 }

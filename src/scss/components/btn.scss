@@ -177,4 +177,14 @@
             }
         }
     }
+
+    &--underline {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.15;
+        color: #354052;
+
+        text-decoration: underline;
+        text-decoration-color: #3a9eff;
+    }
 }
