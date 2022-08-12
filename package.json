@@ -33,6 +33,7 @@
         "webpack-stream": "^7.0.0"
     },
     "dependencies": {
+        "chart.js": "^3.9.1",
         "gulp-notify": "^4.0.0"
     }
 }
