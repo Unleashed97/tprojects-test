@@ -10,9 +10,9 @@
     background: none;
     cursor: pointer;
 
-    svg path {
-        fill: #354052;
-    }
+    // svg path {
+    //     fill: #354052;
+    // }
 
     &:hover .btn__tooltip {
         display: block;
@@ -71,6 +71,7 @@
             fill: #e9edf1;
         }
 
+        &.active,
         &:hover {
             background-color: #354052;
 
@@ -85,6 +86,7 @@
         svg path {
             fill: #354052;
         }
+        &.active,
         &:hover {
             background-color: #e9edf1;
 
@@ -105,9 +107,21 @@
 
         transition: background-color 0.3s linear;
 
-        &:hover {
+        &:hover,
+        &.active {
             background-color: #0085f0;
         }
+    }
+
+    &--outline {
+        padding: 12px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        background: none;
+        border-radius: $radii;
+        border: 1px solid #dfe3e9;
     }
 
     &--user {
@@ -127,7 +141,6 @@
     &--help {
         width: 36px;
         height: 36px;
-        margin-bottom: 14px;
 
         display: flex;
         justify-content: center;
@@ -157,6 +170,14 @@
 
         text-decoration: underline;
         text-decoration-color: #3a9eff;
+
+        transition: color 0.3s linear;
+
+        &:hover,
+        &.active {
+            text-decoration: none;
+            color: #0085f0;
+        }
     }
 
     &--widget-settings {
@@ -171,7 +192,8 @@
             fill: #516173;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
             svg path {
                 fill: #1f8efa;
             }
@@ -186,5 +208,65 @@
 
         text-decoration: underline;
         text-decoration-color: #3a9eff;
+    }
+
+    &--user-panel-nav {
+        position: relative;
+        width: 56px;
+        height: 56px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #273142;
+
+        &:not(&:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+
+            width: 32px;
+            height: 1px;
+
+            background-color: #516173;
+        }
+
+        &.notification {
+            .user-panel__nav-item-icon {
+                position: relative;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 1;
+
+                    width: 12px;
+                    height: 12px;
+
+                    background-color: #ff3031;
+                    outline: 2px solid#354052;
+                    border-radius: 50%;
+                }
+            }
+        }
+        svg path {
+            transition: fill 0.3s linear;
+        }
+        &:hover,
+        &.active {
+            background-color: #273142;
+            span > svg path {
+                fill: #1f8efa;
+            }
+        }
+    }
+
+    &--modal-help {
+        width: 100%;
+        text-align: left;
     }
 }

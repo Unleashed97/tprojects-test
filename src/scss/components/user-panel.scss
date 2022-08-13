@@ -1,4 +1,12 @@
 .user-panel {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+
+    background-color: #273142;
+
     &__nav {
     }
 
@@ -9,45 +17,13 @@
     }
 
     &__nav-item {
-        position: relative;
-        width: 56px;
-        height: 56px;
+    }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &:not(&:last-child)::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-
-            width: 32px;
-            height: 1px;
-
-            background-color: #516173;
-        }
-
-        &--nofitication {
-            .user-panel__nav-item-icon {
-                position: relative;
-
-                &::after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    z-index: 1;
-
-                    width: 12px;
-                    height: 12px;
-
-                    background-color: #ff3031;
-                    outline: 2px solid#354052;
-                    border-radius: 50%;
-                }
-            }
-        }
+    &__btn-help {
+        position: absolute;
+        left: 50%;
+        bottom: 14px;
+        z-index: 1;
+        transform: translateX(-50%);
     }
 }

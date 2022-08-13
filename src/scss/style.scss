@@ -33,6 +33,8 @@ body {
         'header sidebar'
         'main sidebar'
         'footer sidebar';
+
+    overflow: hidden;
 }
 
 ul {
@@ -71,3 +73,4 @@ a {
 @import 'components/widget.scss';
 @import 'components/widget-form.scss';
 @import 'components/chart.scss';
+@import 'components/modal.scss';

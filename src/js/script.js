@@ -1,7 +1,9 @@
 import * as customFunctions from './modules/functions.js'
 
-// vendors
+customFunctions.handlePopupMenu()
+customFunctions.handleModalWindows()
 
+// vendors
 import {
     Chart,
     ArcElement,
