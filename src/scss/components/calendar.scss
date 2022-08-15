@@ -1,0 +1,18 @@
+.calendar {
+    &__body {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+#calendar-range-input,
+#calendar-term-input {
+    display: none;
+}
+
+.flatpickr-calendar {
+    box-shadow: none !important;
+}

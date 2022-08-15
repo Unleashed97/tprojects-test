@@ -10,10 +10,6 @@
     background: none;
     cursor: pointer;
 
-    // svg path {
-    //     fill: #354052;
-    // }
-
     &:hover .btn__tooltip {
         display: block;
     }
@@ -268,5 +264,64 @@
     &--modal-help {
         width: 100%;
         text-align: left;
+    }
+
+    &--tab {
+        position: relative;
+        width: fit-content;
+        padding: 9px 6px;
+        border: 0;
+        background: none;
+
+        display: flex;
+        align-items: center;
+
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.15;
+        color: #516173;
+
+        transition: color 0.3s linear;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            z-index: 1;
+
+            width: 100%;
+            height: 2px;
+
+            background-color: #1f8efa;
+            opacity: 0;
+
+            transition: opacity 0.3s linear;
+        }
+
+        &:hover,
+        &.active {
+            color: #354052;
+            svg path {
+                fill: #354052;
+            }
+
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        & + & {
+            margin-left: 16px;
+        }
+
+        svg {
+            margin-right: 8px;
+        }
+
+        svg path {
+            color: #516173;
+            transition: fill 0.3s linear;
+        }
     }
 }

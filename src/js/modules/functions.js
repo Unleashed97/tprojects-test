@@ -82,4 +82,61 @@ export const handleModalWindows = () => {
             modalHelp.style.display = 'none'
         }
     })
+
+    // modal calendar
+    const modalCalendar = document.querySelector('.modal--calendar')
+    const modalCalendarOpenBtn = document.querySelectorAll(
+        '.modal-calendar-open-btn',
+    )
+    const modalCalendarCloseBtn = document.querySelector(
+        '#modal-calendar-close-btn',
+    )
+
+    modalCalendarOpenBtn.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            modalCalendar.style.display = 'flex'
+        })
+    })
+
+    modalCalendarCloseBtn.addEventListener('click', () => {
+        modalCalendar.style.display = 'none'
+    })
+
+    window.addEventListener('click', ({ target }) => {
+        if (target === modalWidgetRemove) {
+            modalWidgetRemove.style.display = 'none'
+        } else if (target === modalHelp) {
+            modalHelp.style.display = 'none'
+        } else if (target === modalCalendar) {
+            modalCalendar.style.display = 'none'
+        }
+    })
+}
+
+export const openModalTabs = () => {
+    const modalTabsBtns = document.querySelectorAll('.btn--tab')
+    const modalTabContentBlocks = document.querySelectorAll('.calendar__body')
+
+    modalTabsBtns.forEach((btn) => {
+        if (btn.classList.contains('active')) {
+            const modalTabContentId = btn.getAttribute('data-tab-content')
+            document
+                .getElementById(`${modalTabContentId}`)
+                .classList.add('active')
+        }
+        btn.addEventListener('click', () => {
+            modalTabsBtns.forEach((btn) => {
+                btn.classList.remove('active')
+            })
+            modalTabContentBlocks.forEach((contentBlock) =>
+                contentBlock.classList.remove('active'),
+            )
+
+            btn.classList.add('active')
+            const modalTabContentId = btn.getAttribute('data-tab-content')
+            document
+                .getElementById(`${modalTabContentId}`)
+                .classList.add('active')
+        })
+    })
 }

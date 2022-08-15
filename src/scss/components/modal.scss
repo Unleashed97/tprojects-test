@@ -50,14 +50,6 @@
 
             text-align: center;
         }
-
-        .modal__btns {
-            display: flex;
-
-            .btn:first-child {
-                margin-right: 8px;
-            }
-        }
     }
 
     &--help {
@@ -161,10 +153,53 @@
         }
     }
 
+    &--calendar {
+        .modal__container {
+        }
+
+        .modal__content {
+            padding: 16px;
+        }
+
+        .modal__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 16px;
+
+            border-bottom: 2px solid #dfe3e9;
+        }
+
+        .modal__header-tabs {
+            display: flex;
+        }
+
+        .modal__footer {
+            padding: 16px;
+            border-top: 1px solid #dfe3e9;
+        }
+
+        .modal__btns {
+            display: flex;
+
+            .btn:first-child {
+                margin-right: 16px;
+            }
+        }
+    }
+
     &__container {
         background-color: #fff;
         box-shadow: $shadow;
         border-radius: 16px;
         overflow: hidden;
+    }
+
+    .modal__btns {
+        display: flex;
+
+        .btn:first-child {
+            margin-right: 8px;
+        }
     }
 }

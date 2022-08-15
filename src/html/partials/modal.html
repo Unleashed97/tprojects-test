@@ -167,3 +167,52 @@
         </footer>
     </div>
 </div>
+
+<div class="modal modal--calendar">
+    <div class="modal__container">
+        <header class="modal__header">
+            <div class="modal__header-tabs">
+
+                <button class="btn btn--tab active" data-tab-content="calendar-body-term">
+                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M14 -7.62939e-06C14.5523 -7.62939e-06 15 0.447708 15 0.999992V1.001H17C18.6569 1.001 20 2.34415 20 4.001V19.001C20 20.6579 18.6569 22.001 17 22.001H3C1.34315 22.001 0 20.6579 0 19.001V4.001C0 2.34415 1.34315 1.001 3 1.001H5V0.999992C5 0.447708 5.44772 -7.62939e-06 6 -7.62939e-06C6.55228 -7.62939e-06 7 0.447708 7 0.999992V1.001H13V0.999992C13 0.447708 13.4477 -7.62939e-06 14 -7.62939e-06ZM5 3.001C5.00054 3.55282 5.44805 3.99999 6 3.99999C6.55195 3.99999 6.99946 3.55282 7 3.001H13C13.0005 3.55282 13.4481 3.99999 14 3.99999C14.5519 3.99999 14.9995 3.55282 15 3.001H17C17.5523 3.001 18 3.44871 18 4.001V6.001H2V4.001C2 3.44871 2.44772 3.001 3 3.001H5ZM2 8.001H18V19.001C18 19.5533 17.5523 20.001 17 20.001H3C2.44772 20.001 2 19.5533 2 19.001V8.001ZM5 9.99999C4.44772 9.99999 4 10.4477 4 11V13C4 13.5523 4.44772 14 5 14H7C7.55228 14 8 13.5523 8 13V11C8 10.4477 7.55228 9.99999 7 9.99999H5Z"
+                            fill="#516173" />
+                    </svg>
+
+                    Срок
+                </button>
+                <button class="btn btn--tab" data-tab-content="calendar-body-range">
+                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15 0.999992C15 0.447708 14.5523 -7.62939e-06 14 -7.62939e-06C13.4477 -7.62939e-06 13 0.447708 13 0.999992V1.001H7V0.999992C7 0.447708 6.55228 -7.62939e-06 6 -7.62939e-06C5.44772 -7.62939e-06 5 0.447708 5 0.999992V1.001H3C1.34315 1.001 0 2.34415 0 4.001V19.001C0 20.6579 1.34315 22.001 3 22.001H17C18.6569 22.001 20 20.6579 20 19.001V4.001C20 2.34415 18.6569 1.001 17 1.001H15V0.999992ZM6 3.99999C5.44805 3.99999 5.00054 3.55282 5 3.001H3C2.44772 3.001 2 3.44871 2 4.001V6.001H18V4.001C18 3.44871 17.5523 3.001 17 3.001H15C14.9995 3.55282 14.5519 3.99999 14 3.99999C13.4481 3.99999 13.0005 3.55282 13 3.001H7C6.99946 3.55282 6.55195 3.99999 6 3.99999ZM18 8.001H2V19.001C2 19.5533 2.44772 20.001 3 20.001H17C17.5523 20.001 18 19.5533 18 19.001V8.001ZM4 15C4 14.4477 4.44772 14 5 14H8C8.55228 14 9 14.4477 9 15V17C9 17.5523 8.55228 18 8 18H5C4.44772 18 4 17.5523 4 17V15ZM11 9.99999C10.4477 9.99999 10 10.4477 10 11V13C10 13.5523 10.4477 14 11 14H15C15.5523 14 16 13.5523 16 13V11C16 10.4477 15.5523 9.99999 15 9.99999H11Z"
+                            fill="#354052" />
+                    </svg>
+                    Старт-Финиш
+                </button>
+            </div>
+            <button type="button" class="btn" id="modal-calendar-close-btn">
+                <img src="img/modal/close-btn.png" alt="close">
+            </button>
+        </header>
+
+        <div class="modal__content">
+            <div id="calendar-body-term" class="calendar__body">
+                <input type="text" id="calendar-term-input">
+            </div>
+            <div id="calendar-body-range" class="calendar__body">
+                <input type="text" id="calendar-range-input">
+            </div>
+        </div>
+
+
+        <footer class="modal__footer">
+            <div class="modal__btns">
+                <button type="button" class="btn btn--fill-blue">Применить</button>
+                <button type="button" class="btn">Сбросить</button>
+
+            </div>
+        </footer>
+
+    </div>
+</div>
