@@ -4,6 +4,7 @@
     "description": "",
     "type": "module",
     "main": "index.html",
+    "homepage": "https://unleashed97.github.io/tprojects-test/",
     "scripts": {
         "dev": "gulp",
         "build": "gulp build --build"
