@@ -35,7 +35,6 @@
     },
     "dependencies": {
         "chart.js": "^2.7.3",
-        "chartjs-funnel": "^1.0.5",
         "chartjs-plugin-funnel": "^1.1.5",
         "flatpickr": "^4.6.13",
         "gulp-notify": "^4.0.0"
